@@ -1,0 +1,1 @@
+Hola, muchas gracias por tomar su tiempo y revisar mi portafolio este es una paqueña demostración de lo que veras, quize hacerlo de una forma ordenada y simple. De todos modos en los proyectos futuros estará con LARAVEL y nuevos conceptos.
