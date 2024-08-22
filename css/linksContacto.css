@@ -1,5 +1,25 @@
-a {
-    padding: 100%;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor-principal{
+    /*Bordes del dev principal*/
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    /*Tamaño del div principal*/
+    width: 700px;
+    height: 500px;
+    /*Centrar los elementos del div*/
+    align-items: center;
+    margin: 8vh auto 0;
+    padding: 10px;
+}
+.contenedor-perfil{
+    /*Bordes del dev principal*/
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    /*Centrar los elementos del div*/
 }
 fieldset {
     padding: 1%;
