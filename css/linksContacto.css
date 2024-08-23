@@ -2,7 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .contenedor-principal{
-    /*Bordes del dev principal*/
     border-color: black;
     border-style: solid;
     border-width: 1px;
@@ -11,8 +10,71 @@ body{
     height: 500px;
     /*Centrar los elementos del div*/
     align-items: center;
-    margin: 8vh auto 0;
+    margin:10vh auto 0;
     padding: 10px;
+}
+/* Laptops y monitores de tamaño medio */
+@media (min-width: 1025px) {
+    .contenedor-principal {
+        width: 700px; /*Tamaño del Div*/
+        height: 500px;
+        border-color: rgb(255, 0, 0);
+        border-style: solid;
+        border-width: 1px;
+        
+    }
+    #texto-responsive-grande {
+        display: block;
+    }
+    #texto-responsive-pequeño {
+        display: none;
+    }
+}
+/* Tablets y dispositivos de tamaño mediano */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor-principal {
+        width: 69%; /*Tamaño del Div*/
+        border-color: rgb(29, 15, 101);
+        border-style: solid;
+        border-width: 1px;
+        white-space: nowrap;
+    }
+    #texto-responsive-grande {
+        display: block; 
+    }
+    #texto-responsive-pequeño {
+        display: none; 
+    }
+}
+/* Móviles grandes / Tablets pequeños */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contenedor-principal {
+        width: 69%; /*Tamaño del Div*/
+        border-color: rgb(122, 234, 251);
+        border-style: solid;
+        border-width: 1px;
+    }
+    #texto-responsive-grande {
+        display: none;
+    }
+    #texto-responsive-pequeño {
+        display: block;
+    }
+}
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .contenedor-principal {
+        width: 69%; /*Tamaño del Div*/
+        border-color: rgb(179, 245, 12);
+        border-style: solid;        
+        border-width: 1px;
+    }
+    #texto-responsive-grande {
+        display: none;
+    }
+    #texto-responsive-pequeño {
+        display: block;
+    }
 }
 .contenedor-perfil{
     /*Bordes del dev principal*/
@@ -20,7 +82,13 @@ body{
     border-style: solid;
     border-width: 1px;
     /*Centrar los elementos del div*/
+    text-align:center;
+    height: 150px;
 }
 fieldset {
     padding: 1%;
+}
+a{
+    text-decoration: none;
+    size: 12px;
 }
