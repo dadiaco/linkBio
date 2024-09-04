@@ -6,61 +6,74 @@ body {
     align-items: center;
     margin: 0;
 }
-
 .container {
     position: relative;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-
     display: flex;
-    flex-wrap: wrap;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
+    flex-wrap: wrap;    
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     gap: 26px; /* Espacio entre elementos */
     width: 100%; /* Asegúrate de que el contenedor tenga suficiente ancho para envolver los elementos */
-    max-width: 800px; /* Limita el ancho del contenedor para observar mejor el comportamiento de envolvimiento */
+    max-width: 800px; /* Limita el acho del contenedor para observar mejor el comportamiento de envolvimiento */
 }
-
 .profile, .links {
     height: 300px; /* Igual en altura inicial */
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-}
-.profile{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-
 /* Ajuste en la base del tamaño de los elementos con flex */
-
 .profile {
     flex: 1 1 150px; /* Flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    margin-left: 40px;
 }
-
 .links {
     flex: 1 1 250px; /* Flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    margin-right: 40px;
 }
-
+.links a {
+    display: block;
+    width: 80%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
 /* Cambia el tamaño de la altura en el wrap con media queries */
 @media (max-width: 900px) {
     .container {
         width: 90%; /* Asegúrate de que el contenedor tenga suficiente ancho para envolver los elementos */
     }
+
 }
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     .container {
         width: 330px; /* Asegúrate de que el contenedor tenga suficiente ancho para envolver los elementos */
     }
     .profile, .links {
         flex: 1 1 250px; /* Flex-grow: 1, flex-shrink: 1, flex-basis: 250px */
+        margin: 0 auto;
     }
     .profile{
         height: 200px; /* Altura reducida después del wrap */
+    }
+    .profile img {
+        margin-top: 30%;
+        width: 150px;
+        height: 150px;
     }
 }
 @media (max-width: 400px) {
@@ -73,20 +86,14 @@ body {
     .profile{
         height: 200px; /* Altura reducida después del wrap */
     }
+    
 }
 
-.profile img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
 .profile h1 {
     margin: 10px 0;
     font-size: 24px;
     line-height: 1.2;
 }
-
 .container-contact {
     display: none;
 }
